@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Adam",
+      "email": "2_catz@hotmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Adjoa",
+      "email": "buck_bucks@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Alfred",
+      "email": "first_king@aol.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Lauren",
+      "email": "icecream_mom@msn.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Nicole",
+      "email": "cat_collector@yahoo.com",
+      "password": "password12345"
+    },
+    {
+        "name": "Tal",
+        "email": "bad_jokes@yahoo.com",
+        "password": "password12345"
+    }
+  ]
+  
