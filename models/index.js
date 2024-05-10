@@ -1,5 +1,5 @@
 const User = require('./User');
-const Books = require("./Books");
+const Book = require("./Book");
 const Opinion = require("./opinion");
 
 User.hasMany(Opinion, {
@@ -9,11 +9,11 @@ Opinion.hasOne(User, {
     foreignKey: "user_id"
 });
 
-Books.hasMany(Opinion, {
+Book.hasMany(Opinion, {
     foreignKey: "book_id"
 });
-Opinions.hasOne(Book, {
+Opinion.hasOne(Book, {
     foreignKey: "book_id"
 });
 
-module.exports = { User, Books, Opinion };
+module.exports = { User, Book, Opinion };

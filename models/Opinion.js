@@ -24,7 +24,7 @@ Opinion.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "books",
+                model: "book",
                 key: "id"
             }
           }
