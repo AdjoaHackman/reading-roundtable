@@ -26,16 +26,16 @@ Book.init(
       },
     genre: {
         type: DataTypes.STRING,
-        //allowNull: false,
+        //allowNull: false, like query in sequelize
       },
     },
   {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-    },
+    // hooks: {
+    //   beforeCreate: async (newUserData) => {
+    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
+    //     return newUserData;
+    //   },
+    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,
