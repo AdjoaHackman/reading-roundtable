@@ -1,34 +1,13 @@
 
-function searchBooks(query, apiKey) {
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${apiKey}`;
-
-    return fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            
-            return data;
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
-};
-
-
 const query = "";
-const apiKey = "AIzaSyDPekw_tDo4W_U1sp3k9A3OZutdnLxlosA";
 
-searchBooks(query, apiKey)
+searchBooks(query)
     .then(results => {
         console.log(results);
     });
 
-function searchBooks(query, apiKey) {
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${apiKey}`;
+function searchBooks(query) {
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${process.env.apiKey}`;
 
     return fetch(url)
         .then(response => {
@@ -101,7 +80,7 @@ function displayResults(books) {
 // Example usage
 // const query = "";
 // const apiKey = "AIzaSyDPekw_tDo4W_U1sp3k9A3OZutdnLxlosA";
-searchBooks(query, apiKey)
+searchBooks(query)
     .then(results => {
         displayResults(results);
     });
