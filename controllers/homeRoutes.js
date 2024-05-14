@@ -10,19 +10,17 @@ router.get('/', withAuth, async (req, res) => {
     });
 
     if (!userData) {
-      res.status(404).json({message:"No users found"});
-
-      return;
+      return res.status(400).json({message:"No users found"});
     }
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
-      users,
+    return res.render('homepage', {
+    users,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
 
