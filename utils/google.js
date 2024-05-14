@@ -80,9 +80,9 @@ function displayResults(books) {
 // Example usage
 // const query = "";
 // const apiKey = "AIzaSyDPekw_tDo4W_U1sp3k9A3OZutdnLxlosA";
-searchBooks(query)
-    .then(results => {
-        displayResults(results);
-    });
+// searchBooks(query)
+//     .then(results => {
+//         displayResults(results);
+//     });
 
 module.exports = { searchBooks };
