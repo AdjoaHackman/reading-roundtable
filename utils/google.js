@@ -1,7 +1,3 @@
-// const router = require('express').Router();
-// const userRoutes = require('./userRoutes');
-
-// router.use('/users', userRoutes);
 
 function searchBooks(query, apiKey) {
     const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${apiKey}`;
@@ -25,6 +21,7 @@ function searchBooks(query, apiKey) {
 
 const query = "";
 const apiKey = "AIzaSyDPekw_tDo4W_U1sp3k9A3OZutdnLxlosA";
+
 searchBooks(query, apiKey)
     .then(results => {
         console.log(results);
