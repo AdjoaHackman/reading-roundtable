@@ -3,12 +3,10 @@ const router = require('express').Router();
 //const { Book } = require('../models');
 const { searchBooks } = require('../../utils/google.js');
 
-
 router.get ('/google' , async (req, res) => {
     try {
         const bookData = await searchBooks("Harry Potter");
         console.log(bookData);
-
 
         if(!bookData) {
             return res.status(400).json({message:"No results found"});
@@ -20,7 +18,6 @@ router.get ('/google' , async (req, res) => {
     } catch(err) {
         console.log(err);
         return res.status(500).json(err);
-
     }
 });
 
