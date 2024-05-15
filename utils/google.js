@@ -1,10 +1,10 @@
 
 const query = "";
 
-searchBooks(query)
-    .then(results => {
-        console.log(results);
-    });
+// searchBooks(query)
+//     .then(results => {
+//         console.log(results);
+//     });
 
 function searchBooks(query) {
     const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${process.env.apiKey}`;
@@ -80,9 +80,9 @@ function displayResults(books) {
 // Example usage
 // const query = "";
 // const apiKey = "AIzaSyDPekw_tDo4W_U1sp3k9A3OZutdnLxlosA";
-searchBooks(query)
-    .then(results => {
-        displayResults(results);
-    });
+// searchBooks(query)
+//     .then(results => {
+//         displayResults(results);
+//     });
 
 module.exports = { searchBooks };

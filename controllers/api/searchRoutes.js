@@ -1,8 +1,7 @@
 const router = require('express').Router();
 
-// const { Book } = require('../models');
-const { Book } = require('../models');
-const { searchBooks } = require('../utils/google.js');
+//const { Book } = require('../models');
+const { searchBooks } = require('../../utils/google.js');
 
 
 router.get ('/google' , async (req, res) => {
@@ -12,7 +11,7 @@ router.get ('/google' , async (req, res) => {
 
 
         if(!bookData) {
-            return res.status(400).json({message:"No users found"});
+            return res.status(400).json({message:"No results found"});
         } else {
             return res.status(200).json(bookData);
         }
