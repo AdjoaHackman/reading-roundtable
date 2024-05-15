@@ -5,7 +5,7 @@ const { searchBooks } = require('../../utils/google.js');
 
 router.get ('/google' , async (req, res) => {
     try {
-        const bookData = await searchBooks("Harry Potter");
+        const bookData = await searchBooks(bookSearch);
         console.log(bookData);
 
         if(!bookData) {
@@ -20,7 +20,6 @@ router.get ('/google' , async (req, res) => {
         return res.status(500).json(err);
     }
 });
-
 
 
 module.exports = router;
