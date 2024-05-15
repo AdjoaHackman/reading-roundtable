@@ -3,8 +3,10 @@ const { User } = require('../../models');
 
 router.post('/login', async (req, res) => {
   try {
+    console.log("login attempt!")
     const userData = await User.findOne({ where: { email: req.body.email } });
-
+    console.log("User data: ")
+    console.log(userData)
     if (!userData) {
       res
         .status(400)
