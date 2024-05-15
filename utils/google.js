@@ -1,10 +1,10 @@
 
 const query = "";
 
-searchBooks(query)
-    .then(results => {
-        console.log(results);
-    });
+// searchBooks(query)
+//     .then(results => {
+//         console.log(results);
+//     });
 
 function searchBooks(query) {
     const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${process.env.apiKey}`;
