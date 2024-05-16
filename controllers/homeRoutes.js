@@ -48,6 +48,28 @@ router.get('/search', async (req, res) => {
   }
 });
 
+router.get('/library', async (req, res) => {
+  req.query.bookSearch;
+  
+  try {
+    const bookData = await searchBooks(req.query.bookSearch);
+    console.log(bookData);
+
+    if (!bookData) {
+      return res.status(400).json({ message: "No results found" });
+    }
+
+    return res.render('searchResult', {
+      bookData,
+
+    });
+
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');

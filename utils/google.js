@@ -73,6 +73,14 @@ function displayResults(books) {
         link.textContent = 'More info';
         card.appendChild(link);
 
+        // Add a button to add the book
+        const addButton = document.createElement('button');
+        addButton.textContent = 'Add to My Library';
+        addButton.addEventListener('click', () => {
+            addBook(book);
+        });
+        card.appendChild(addButton);
+
         resultsContainer.appendChild(card);
     });
 }
