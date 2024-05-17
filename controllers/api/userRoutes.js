@@ -1,6 +1,37 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+router.post('/signup', async (req, res) => {
+  try {
+    console.log("signup attempt!")
+    const userData = await User.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password
+    });
+    console.log("User data: ")
+    console.log(userData)
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Failed to create an account!' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'You are now logged in!' });
+    });
+
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+});
+
+
 router.post('/login', async (req, res) => {
   try {
     console.log("login attempt!")
