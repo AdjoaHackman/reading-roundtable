@@ -38,52 +38,52 @@ function searchBooks(query) {
         });
 }
 
-function displayResults(books) {
-    const resultsContainer = document.getElementById('results-container');
-    resultsContainer.innerHTML = ''; // Clear previous results
+// function displayResults(books) {
+//     const resultsContainer = document.getElementById('results-container');
+//     resultsContainer.innerHTML = ''; // Clear previous results
 
-    if (books.length === 0) {
-        resultsContainer.innerHTML = '<p>No results found.</p>';
-        return;
-    }
+//     if (books.length === 0) {
+//         resultsContainer.innerHTML = '<p>No results found.</p>';
+//         return;
+//     }
 
-    books.forEach(book => {
-        const card = document.createElement('div');
-        card.classList.add('book-card');
+//     books.forEach(book => {
+//         const card = document.createElement('div');
+//         card.classList.add('book-card');
 
-        const thumbnail = document.createElement('img');
-        thumbnail.src = book.thumbnail;
-        thumbnail.alt = 'Book Thumbnail';
-        card.appendChild(thumbnail);
+//         const thumbnail = document.createElement('img');
+//         thumbnail.src = book.thumbnail;
+//         thumbnail.alt = 'Book Thumbnail';
+//         card.appendChild(thumbnail);
 
-        const title = document.createElement('h2');
-        title.textContent = book.title;
-        card.appendChild(title);
+//         const title = document.createElement('h2');
+//         title.textContent = book.title;
+//         card.appendChild(title);
 
-        const authors = document.createElement('p');
-        authors.textContent = 'Authors: ' + book.authors;
-        card.appendChild(authors);
+//         const authors = document.createElement('p');
+//         authors.textContent = 'Authors: ' + book.authors;
+//         card.appendChild(authors);
 
-        const description = document.createElement('p');
-        description.textContent = book.description || 'No description available.';
-        card.appendChild(description);
+//         const description = document.createElement('p');
+//         description.textContent = book.description || 'No description available.';
+//         card.appendChild(description);
 
-        const link = document.createElement('a');
-        link.href = book.infoLink;
-        link.textContent = 'More info';
-        card.appendChild(link);
+//         const link = document.createElement('a');
+//         link.href = book.infoLink;
+//         link.textContent = 'More info';
+//         card.appendChild(link);
 
-        // Add a button to add the book
-        const addButton = document.createElement('button');
-        addButton.textContent = 'Add to My Library';
-        addButton.addEventListener('click', () => {
-            addBook(book);
-        });
-        card.appendChild(addButton);
+//         // Add a button to add the book
+//         const addButton = document.createElement('button');
+//         addButton.textContent = 'Add to My Library';
+//         addButton.addEventListener('click', () => {
+//             addBook(book);
+//         });
+//         card.appendChild(addButton);
 
-        resultsContainer.appendChild(card);
-    });
-}
+//         resultsContainer.appendChild(card);
+//     });
+// }
 
 // Example usage
 // const query = "";
