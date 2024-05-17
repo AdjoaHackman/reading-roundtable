@@ -2,6 +2,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: lightgray;
   color: white;
+  height: 900px;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/assets/images/books.png");
+  background-size: cover;
 }
 
 .login {
@@ -9,12 +12,50 @@ body {
   font-size: 15px;
 }
 
-#login-form {
-  height: 900px;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/assets/images/books.png");
-  background-size: cover;
-}
-
 .email, .password {
   width: 300px;
+}
+
+.bookdata {
+  border: solid 2px white;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+@media (min-width: 0px) {
+  .bookdata {
+    width: 400px;
+  }
+}
+@media (min-width: 576px) {
+  .bookdata {
+    width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .bookdata {
+    width: 700px;
+  }
+}
+@media (min-width: 1200px) {
+  .bookdata {
+    width: 1000px;
+  }
+}
+@media (min-width: 1400px) {
+  .bookdata {
+    width: 1200px;
+  }
+}
+
+.thumbnail {
+  height: 300px;
+}
+
+.search-description {
+  background-color: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
 }
