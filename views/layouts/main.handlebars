@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center">
+  <header>
+    {{#if logged_in}}
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand mx-3" href="#">Reading Roundtable</a>
@@ -22,27 +23,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-lg-0">
           </ul>
-          <form class="d-flex" role="search">
-            <button type="button" class="btn btn-primary d-flex mx-3" id="login">Log in
-              <span class="material-symbols-outlined">
-                login
-              </span>
-            </button>
-          </form>
         </div>
+        <button class="btn btn-primary" id="logout">logout</button>
       </div>
     </nav>
-</div>
+  </header>
     <!-- TODO: Add a comment describing the functionality of this helper -->
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
     {{else}}
       
     {{/if}}
   </header>
-  <main class="container container-fluid mt-5">
+  <main class="container-fluid" style="padding: 0">
     {{{ body }}}
   </main>
   {{#if logged_in}}
