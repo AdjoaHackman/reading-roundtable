@@ -38,8 +38,9 @@ router.get('/search', async (req, res) => {
     }
 
     return res.render('searchResult', {
-      bookData,
-
+      bookData, 
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id
     });
 
   } catch (err) {

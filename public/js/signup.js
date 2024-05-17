@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (response.ok) {
      document.location.replace('/');
   } else {
-     alert('Failed to create an account!');
+    data = await response.json()
+    alert('Failed to create an account!');
   }
 })
 
