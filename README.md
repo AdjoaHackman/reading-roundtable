@@ -1,6 +1,9 @@
-# <Reading-Roundtable>
+# Reading-Roundtable
 
-## Description
+![readingroundtable](https://img.shields.io/badge/Reading-Roundtable-red)
+
+
+## Description TODO
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
@@ -10,21 +13,30 @@ Provide a short description explaining the what, why, and how of your project. U
 - What did you learn?
 
 
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [Usage](#usage)
+- [Credits](#credits)
 - [License](#license)
+- [Features](#features)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [TODO](#todo)
+
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. 
+1. `npm install`
+2. `mysql -u root -p` followed by your MySQL password
+3. `source ./db/schema.sql` then `quit` out of mysql
+4. `npm run seeds`
+5. `npm start`
 
-## Usage
+
+## Usage TODO?
 
 Provide instructions and examples for use. Include screenshots as needed.
 
@@ -34,36 +46,77 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ```
 
+
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+- [Tal BenDavid](https://github.com/talbdbd)
+- [Nicole Kim](https://github.com/nicolehekim)
+- [Adjoa Hackman](https://github.com/AdjoaHackman)
+- [Lauren Elisiario](https://github.com/lelisiario)
+- [Adam Hussain](https://github.com/adamh1223)
+- [Alfred Wallace](https://github.com/alfwall)
+---
+- [Google Books API](https://developers.google.com/books)
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
 ## Features
 
-If your project has a lot of features, list them here.
+- Search for books through the Google Books API
+- Create an account to build a personal library
 
-## How to Contribute
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+## User Story
 
-## Tests
+As a user,\
+\
+I should be able to create an account, \
+login, \
+add books to my list of “read”, \
+see lists of other users who publicly share or are friends with me, \
+and be able to discover new books based on what I have already added to my list.
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+
+## Acceptance Criteria
+GIVEN a website with book information and log-in widget on the side...
+
+WHEN I search book titles/authors,\
+THEN I am presented with a list of titles similar to my search query with an “Add On” button.
+
+WHEN I click on the “Add On” button,\
+THEN I am presented with a login/sign-up popup.
+
+WHEN I enter my information with email/password requirement,\
+THEN I am logged in with my unique information.
+
+WHEN I am logged in, \
+THEN I should be able to see my list, search for new titles, rate titles and leave reviews.
+
+
+## TODO
+
+### Minimum Requirements
+- [x] Use Node.js and Express.js to create a RESTful API.
+- [x] Use Handlebars.js as the templating engine.
+- [x] Use MySQL and the Sequelize ORM for the database.
+- [x] Have both GET and POST routes for retrieving and adding new data.
+- [ ] Be deployed using Heroku (with data).
+- [x] Use at least one new library, package, or technology that we haven’t discussed.
+- [ ] Have a polished UI.
+- [ ] Be responsive.
+- [ ] Be interactive (i.e., accept and respond to user input).
+- [x] Have a folder structure that meets the MVC paradigm.
+- [ ] Include authentication (express-session and cookies).
+- [ ] Protect API keys and sensitive information with environment variables.
+- [ ] Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+- [ ] Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+- [ ] Update your Module 2 portfolio websites with a link to the app.
+
+### Nice To Haves
+- [ ] Keep a list of books for each user
+- [ ] View that list
+- [ ] Delete from that list
