@@ -1,9 +1,13 @@
+const express = require('express')
 const router = require('express').Router();
 
 //const { Book } = require('../models');
 const { searchBooks } = require('../../utils/google.js');
 
-router.get ('/library' , async (req, res) => {
+// const app = express();
+// app.use(express.static(path.join(__dirname, 'public')));
+
+router.get ('/' , async (req, res) => {
     try {
         const bookData = await searchBooks(bookSearch);
         console.log(bookData);
@@ -21,5 +25,12 @@ router.get ('/library' , async (req, res) => {
     }
 });
 
+router.post('/', async (req, res) => {
+    console.log(req.body);
+
+    res.json({
+        message: 'Saved book data successfully.'
+    });
+});
 
 module.exports = router;

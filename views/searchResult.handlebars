@@ -24,11 +24,11 @@
             <p>{{search.authors}}</p>
             <h3 class="my-3">Synopsis:</h3>
             <p class="search-description">{{search.description}}</p>
-            <button class="btn btn-secondary" id="addToLibrary">Add to My Library</button>
+            <button data-book="{{json search}}" class="btn btn-secondary" id="addToLibrary">Add to My Library</button>
             </div>
             <br>
         </div>
     </div>
     {{/each}}
 </section>
-<script src="/js/search.js"></script>
+<script src="/js/addBook.js"></script>
