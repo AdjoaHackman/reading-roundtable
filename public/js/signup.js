@@ -10,6 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const signUpName = document.getElementById("create-name").value
     const signUpEmail = document.getElementById("create-email").value
     const signUpPassword = document.getElementById("create-password").value
+    const errorMessage = document.getElementById('displayError')
+    const reEnter = document.getElementById('re-enter-password').value
+
+    if (signUpPassword.length < 8) {
+      errorMessage.textContent = 'Password must be at least 8 characters'
+      errorMessage.classList.remove('visually-hidden')
+      return;
+    }
+
+    if (reEnter !== signUpPassword) {
+      errorMessage.textContent = 'Passwords do not match'
+      errorMessage.classList.remove('visually-hidden')
+      return;
+    }
 
   const response = await fetch('/api/users/signup', {
     method: 'POST',
