@@ -24,7 +24,7 @@ body {
 
 @media (min-width: 0px) {
   .bookdata {
-    width: 400px;
+    width: 300px;
   }
 }
 @media (min-width: 576px) {
