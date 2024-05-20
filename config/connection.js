@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-let PORT = process.env.port || 3001;
+let PORT = 3306;
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
