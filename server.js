@@ -11,6 +11,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+// capitalizing process.env.PORT may be mandatory for Heroku
 
 const hbs = exphbs.create({ helpers });
 
