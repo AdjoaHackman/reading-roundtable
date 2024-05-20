@@ -2,15 +2,11 @@
 
 ![readingroundtable](https://img.shields.io/badge/Reading-Roundtable-red)
 
+[The Result!](https://reading-roundtable-a1d1097f86e5.herokuapp.com/)
 
 ## Description TODO
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+An Express.js web app that can search for books from the Google Books API and uses login sessions.
 
 
 ## Table of Contents
@@ -38,14 +34,8 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Usage TODO?
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
+1. Login
+2. Search!
 
 ## Credits
 
@@ -104,19 +94,19 @@ THEN I should be able to see my list, search for new titles, rate titles and lea
 - [x] Use Handlebars.js as the templating engine.
 - [x] Use MySQL and the Sequelize ORM for the database.
 - [x] Have both GET and POST routes for retrieving and adding new data.
-- [ ] Be deployed using Heroku (with data).
+- [x] Be deployed using Heroku (with data).
 - [x] Use at least one new library, package, or technology that we haven’t discussed.
-- [ ] Have a polished UI.
-- [ ] Be responsive.
-- [ ] Be interactive (i.e., accept and respond to user input).
+- [x] Have a polished UI.
+- [x] Be responsive.
+- [x] Be interactive (i.e., accept and respond to user input).
 - [x] Have a folder structure that meets the MVC paradigm.
-- [ ] Include authentication (express-session and cookies).
-- [ ] Protect API keys and sensitive information with environment variables.
-- [ ] Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-- [ ] Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-- [ ] Update your Module 2 portfolio websites with a link to the app.
+- [x] Include authentication (express-session and cookies).
+- [x] Protect API keys and sensitive information with environment variables.
+- [x] Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+- [x] Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+- [x] Update your Module 2 portfolio websites with a link to the app.
 
-### Nice To Haves
+### Future Plans
 - [ ] Keep a list of books for each user
 - [ ] View that list
 - [ ] Delete from that list
