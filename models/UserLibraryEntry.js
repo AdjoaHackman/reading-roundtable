@@ -10,6 +10,9 @@ UserLibraryEntry.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+        },
+        user_id: {
+            
         }
     },
     {
