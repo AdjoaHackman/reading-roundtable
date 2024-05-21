@@ -40,6 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
      document.location.replace('/');
   } else {
     data = await response.json()
-    alert('Failed to create an account!');
+    // alert('Failed to create an account!');
   }
 })

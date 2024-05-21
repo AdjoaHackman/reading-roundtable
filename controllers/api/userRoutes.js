@@ -78,8 +78,7 @@ router.post('/logout', (req, res) => {
 
 
 // GET signup page
-router.
 
 // POST new signup
 
-module.exports = router;
+module.exports = router 
